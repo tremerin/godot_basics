@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://c3nxauw2aj3gt"]
+
+[ext_resource type="PackedScene" uid="uid://bugdo151vf58t" path="res://scenes/matrix.tscn" id="1_m4ffg"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_s3lp8"]
+
+[node name="Game" type="Node3D"]
+
+[node name="Matrix" parent="." instance=ExtResource("1_m4ffg")]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.67244)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.42999)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 1, 0, 0, -4.72065)
+mesh = SubResource("BoxMesh_s3lp8")

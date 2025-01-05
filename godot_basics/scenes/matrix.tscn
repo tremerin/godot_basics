@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bugdo151vf58t"]
+
+[ext_resource type="Script" path="res://scripts/Matrix.gd" id="1_db4kd"]
+
+[node name="Matrix" type="Node3D"]
+script = ExtResource("1_db4kd")
