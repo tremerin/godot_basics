@@ -1,19 +1,26 @@
-[gd_scene load_steps=3 format=3 uid="uid://c3nxauw2aj3gt"]
+[gd_scene load_steps=5 format=3 uid="uid://c3nxauw2aj3gt"]
 
 [ext_resource type="PackedScene" uid="uid://bugdo151vf58t" path="res://scenes/matrix.tscn" id="1_m4ffg"]
+[ext_resource type="PackedScene" uid="uid://de4vswvlkriy0" path="res://scenes/jewel.tscn" id="2_1rtuw"]
+[ext_resource type="Material" uid="uid://d0ws51rjiwkff" path="res://red_gem.tres" id="3_uhtoi"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_s3lp8"]
 
 [node name="Game" type="Node3D"]
 
 [node name="Matrix" parent="." instance=ExtResource("1_m4ffg")]
+scene = ExtResource("2_1rtuw")
+size = 4
+margin = 0.25
+material = ExtResource("3_uhtoi")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.67244)
+transform = Transform3D(0.688469, 0.292435, -0.663697, 0, 0.915107, 0.40321, 0.725266, -0.277597, 0.630023, -4.78039, 4.14442, 6.98539)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.42999)
+transform = Transform3D(0.812592, 0.266936, -0.518111, 0, 0.888953, 0.457998, 0.582832, -0.372166, 0.722357, 0, 0, 5.42999)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 1, 0, 0, -4.72065)
+visible = false
 mesh = SubResource("BoxMesh_s3lp8")
