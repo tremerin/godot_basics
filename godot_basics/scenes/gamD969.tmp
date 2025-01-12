@@ -15,7 +15,7 @@ margin = 0.25
 material = ExtResource("3_uhtoi")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 12.6317, 0)
+transform = Transform3D(0.688469, 0.292435, -0.663697, 0, 0.915107, 0.40321, 0.725266, -0.277597, 0.630023, -4.78039, 4.14442, 6.98539)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.812592, 0.266936, -0.518111, 0, 0.888953, 0.457998, 0.582832, -0.372166, 0.722357, 0, 0, 5.42999)
