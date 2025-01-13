@@ -10,17 +10,15 @@
 
 [node name="Matrix" parent="." instance=ExtResource("1_m4ffg")]
 scene = ExtResource("2_1rtuw")
-size = 4
-margin = 0.25
+margin = 0.2
 material = ExtResource("3_uhtoi")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 12.6317, 0)
+transform = Transform3D(1, 0, 0, 0, 0.556078, 0.83113, 0, -0.83113, 0.556078, 0, 12.7509, 11.7927)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.812592, 0.266936, -0.518111, 0, 0.888953, 0.457998, 0.582832, -0.372166, 0.722357, 0, 0, 5.42999)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 1, 0, 0, -4.72065)
-visible = false
+transform = Transform3D(0.1, 0, 0, 0, 10, 0, 0, 0, 0.1, 0, 0, 0)
 mesh = SubResource("BoxMesh_s3lp8")
