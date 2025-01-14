@@ -10,6 +10,8 @@ var rotating:bool = false
 var rotate_dir = 0
 var ini_y
 var end_y
+var ini_x
+var end_x
 var elapsed: float = 0
 	
 func _ready():
@@ -64,3 +66,13 @@ func _input(event):
 		#print("rotar ", rotate_dir, " ", end_y)
 		#rotate_y(deg_to_rad(speed_rotation))
 		#rotating = false
+	elif Input.is_action_just_pressed("Rotate_up") and rotating == false:
+		ini_x = rotation.x
+		rotating = true
+		rotate_dir = -1
+		end_x = ini_x + deg_to_rad(90 * rotate_dir)
+	elif Input.is_action_just_pressed("Rotate_down") and rotating == false:
+		ini_x = rotation.x
+		rotating = true
+		rotate_dir = 1
+		end_x = ini_x + deg_to_rad(90 * rotate_dir)
