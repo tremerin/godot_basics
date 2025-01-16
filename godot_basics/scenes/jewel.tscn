@@ -1,8 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://de4vswvlkriy0"]
+[gd_scene load_steps=3 format=3 uid="uid://de4vswvlkriy0"]
+
+[ext_resource type="Script" path="res://scripts/jewel.gd" id="1_08ku6"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_hmdi8"]
 
 [node name="Jewel" type="Node3D"]
+script = ExtResource("1_08ku6")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("BoxMesh_hmdi8")

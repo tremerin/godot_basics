@@ -21,23 +21,28 @@ func _ready():
 	end_y = rotation.y
 	end_x = rotation.x
 	end_z = rotation.z
+	var jewel_tipe:int
 	# Use load() instead of preload() if the path isn't known at compile-time.
 	# var scene = preload("res://scenes/jewel.tscn").instantiate()
 	# Add the node as a child of the node the script is attached to.
 	# var instance = scene.instantiate()
 	# add_child(instance)
-	var offset:float = size/2 #(size + (margin * (size - 1))) / 2
+	var offset:float = ((size + (margin * (size - 1))) / 2) - 0.5
 	print(offset)
 	for k in range(0, size):
 		for i in range(0, size):
 			for j in range(0, size):
 				#tipo de gema aleatorio
+				jewel_tipe = randi_range(0, 5)
+				print("gema tipo: ", jewel_tipe)
 				var instance = scene.instantiate()
+				instance.jewel_type = jewel_tipe
+				#material = colors[0]
+				#instance.mesh.set_surface_override_material(0, material)
 				add_child(instance)
 				instance.position.x += i + (margin * i) - offset
 				instance.position.y += j + (margin * j) - offset 
 				instance.position.z += k + (margin * k) - offset
-				#instance.Mesh.Material = material
 				#print(i, j, k)
 
 
