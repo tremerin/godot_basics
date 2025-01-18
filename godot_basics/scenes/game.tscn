@@ -1,19 +1,16 @@
-[gd_scene load_steps=6 format=3 uid="uid://c3nxauw2aj3gt"]
+[gd_scene load_steps=5 format=3 uid="uid://c3nxauw2aj3gt"]
 
 [ext_resource type="PackedScene" uid="uid://bugdo151vf58t" path="res://scenes/matrix.tscn" id="1_m4ffg"]
-[ext_resource type="PackedScene" uid="uid://de4vswvlkriy0" path="res://scenes/jewel.tscn" id="2_1rtuw"]
-[ext_resource type="Material" uid="uid://dpqw7ajhgpgxp" path="res://materials/blue_gem.tres" id="3_3i6c8"]
-[ext_resource type="Material" uid="uid://d0ws51rjiwkff" path="res://materials/red_gem.tres" id="3_uhtoi"]
+[ext_resource type="Material" uid="uid://d0ws51rjiwkff" path="res://materials/red_gem.tres" id="2_nnkds"]
+[ext_resource type="PackedScene" uid="uid://de4vswvlkriy0" path="res://scenes/jewel.tscn" id="2_vthrw"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_s3lp8"]
 
 [node name="Game" type="Node3D"]
 
 [node name="Matrix" parent="." instance=ExtResource("1_m4ffg")]
-scene = ExtResource("2_1rtuw")
-margin = 0.2
-colors = [ExtResource("3_3i6c8"), ExtResource("3_uhtoi"), null]
-material = ExtResource("3_3i6c8")
+scene = ExtResource("2_vthrw")
+material = ExtResource("2_nnkds")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.556078, 0.83113, 0, -0.83113, 0.556078, 0, 10.8903, 7.44024)
@@ -23,5 +20,4 @@ transform = Transform3D(0.812592, 0.266936, -0.518111, 0, 0.888953, 0.457998, 0.
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.1, 0, 0, 0, 10, 0, 0, 0, 0.1, 0, 0, 0)
-visible = false
 mesh = SubResource("BoxMesh_s3lp8")
